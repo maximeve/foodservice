@@ -1,0 +1,27 @@
+.navbar {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > ul {
+    display: flex;
+    list-style: none;
+    font-weight: 800;
+    justify-content: center;
+}
+
+.navbar > ul > li {
+    margin-left: 2rem;
+}
+
+.navbar__logo{
+    width: 3rem;
+    object-fit: contain;
+}
+
+.navbar__profile{
+    width: 3rem;
+    object-fit: contain;
+}
