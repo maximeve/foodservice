@@ -1,3 +1,9 @@
 .popular{
     background-color: #F6F6F4;
 }
+
+.popular__card{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+}

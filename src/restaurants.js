@@ -2,8 +2,9 @@ const restaurants = [{
     "id": 1,
     "name": "Mission Chinese Food",
     "neighborhood": "Manhattan",
-    "photograph": "1.jpg",
+    "photograph": "https://www.thespruceeats.com/thmb/X6mg_2VBCQQ2X8VrLcPTf8_4ce0=/2733x2050/smart/filters:no_upscale()/chinese-take-out-472927590-57d31fff3df78c5833464e7b.jpg",
     "address": "171 E Broadway, New York, NY 10002",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.713829,
       "lng": -73.989667
@@ -41,8 +42,9 @@ const restaurants = [{
     "id": 2,
     "name": "Emily",
     "neighborhood": "Brooklyn",
-    "photograph": "2.jpg",
+    "photograph": "https://assets.afcdn.com/recipe/20200219/107901_w1024h768c1cx4330cy2886.webp",
     "address": "919 Fulton St, Brooklyn, NY 11238",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.683555,
       "lng": -73.966393
@@ -80,8 +82,9 @@ const restaurants = [{
     "id": 3,
     "name": "Kang Ho Dong Baekjeong",
     "neighborhood": "Manhattan",
-    "photograph": "3.jpg",
+    "photograph": "https://s3.eu-west-3.amazonaws.com/media.cdn.brusselslife.be/81410/1082-article-image.jpg",
     "address": "1 E 32nd St, New York, NY 10016",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.747143,
       "lng": -73.985414
@@ -119,8 +122,9 @@ const restaurants = [{
     "id": 4,
     "name": "Katz's Delicatessen",
     "neighborhood": "Manhattan",
-    "photograph": "4.jpg",
+    "photograph": "https://www.thespruceeats.com/thmb/X6mg_2VBCQQ2X8VrLcPTf8_4ce0=/2733x2050/smart/filters:no_upscale()/chinese-take-out-472927590-57d31fff3df78c5833464e7b.jpg",
     "address": "205 E Houston St, New York, NY 10002",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.722216,
       "lng": -73.987501
@@ -158,8 +162,9 @@ const restaurants = [{
     "id": 5,
     "name": "Roberta's Pizza",
     "neighborhood": "Brooklyn",
-    "photograph": "5.jpg",
+    "photograph": "https://www.thespruceeats.com/thmb/X6mg_2VBCQQ2X8VrLcPTf8_4ce0=/2733x2050/smart/filters:no_upscale()/chinese-take-out-472927590-57d31fff3df78c5833464e7b.jpg",
     "address": "261 Moore St, Brooklyn, NY 11206",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.705089,
       "lng": -73.933585
@@ -197,8 +202,9 @@ const restaurants = [{
     "id": 6,
     "name": "Hometown BBQ",
     "neighborhood": "Brooklyn",
-    "photograph": "6.jpg",
+    "photograph": "https://static.ah.nl/static/recepten/img_RAM_PRD148832_1224x900_JPG.jpg",
     "address": "454 Van Brunt St, Brooklyn, NY 11231",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.674925,
       "lng": -74.016162
@@ -236,8 +242,9 @@ const restaurants = [{
     "id": 7,
     "name": "Superiority Burger",
     "neighborhood": "Manhattan",
-    "photograph": "7.jpg",
+    "photograph": "https://www.thespruceeats.com/thmb/X6mg_2VBCQQ2X8VrLcPTf8_4ce0=/2733x2050/smart/filters:no_upscale()/chinese-take-out-472927590-57d31fff3df78c5833464e7b.jpg",
     "address": "430 E 9th St, New York, NY 10009",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.727397,
       "lng": -73.983645
@@ -275,8 +282,9 @@ const restaurants = [{
     "id": 8,
     "name": "The Dutch",
     "neighborhood": "Manhattan",
-    "photograph": "8.jpg",
+    "photograph": "https://www.thespruceeats.com/thmb/X6mg_2VBCQQ2X8VrLcPTf8_4ce0=/2733x2050/smart/filters:no_upscale()/chinese-take-out-472927590-57d31fff3df78c5833464e7b.jpg",
     "address": "131 Sullivan St, New York, NY 10012",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.726584,
       "lng": -74.002082
@@ -314,8 +322,9 @@ const restaurants = [{
     "id": 9,
     "name": "Mu Ramen",
     "neighborhood": "Queens",
-    "photograph": "9.jpg",
+    "photograph": "https://www.thespruceeats.com/thmb/X6mg_2VBCQQ2X8VrLcPTf8_4ce0=/2733x2050/smart/filters:no_upscale()/chinese-take-out-472927590-57d31fff3df78c5833464e7b.jpg",
     "address": "1209 Jackson Ave, Queens, NY 11101",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.743797,
       "lng": -73.950652
@@ -353,8 +362,9 @@ const restaurants = [{
     "id": 10,
     "name": "Casa Enrique",
     "neighborhood": "Queens",
-    "photograph": "10.jpg",
+    "photograph": "https://www.thespruceeats.com/thmb/X6mg_2VBCQQ2X8VrLcPTf8_4ce0=/2733x2050/smart/filters:no_upscale()/chinese-take-out-472927590-57d31fff3df78c5833464e7b.jpg",
     "address": "5-48 49th Ave, Queens, NY 11101",
+    "desc": "A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free. The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Sunday.",
     "latlng": {
       "lat": 40.743394,
       "lng": -73.954235

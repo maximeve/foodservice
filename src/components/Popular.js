@@ -21,11 +21,12 @@ function Popular() {
     return (
         <div className='popular'>
             <h2>Popular Places</h2>
-            {restaurants.map(resto => <Card name={resto.name} key={resto.id} photo={resto.photograph} address={resto.address} hours={resto.operating_hours} reviews={resto.reviews}/>)}
+            <div className="popular__card">
+            {restaurants.map(resto => <Card name={resto.name} key={resto.id} desc={resto.desc} photo={resto.photograph} address={resto.address} hours={resto.operating_hours} reviews={resto.reviews} cuisine={resto.cuisine_type}/>)}
             {/* <PlacesAutocomplete value={value} onChange={setValue} onSelect={handleSelect}>
                 {()=>(<div>Hey</div>)}
             </PlacesAutocomplete> */}
-
+            </div>
         </div>
     )
 }
