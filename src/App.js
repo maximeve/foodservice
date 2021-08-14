@@ -1,14 +1,10 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Popular from './components/Popular'
 import './App.css';
+import Home from './screens/Home'
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <Popular />
+      <Home/>
     </div>
   );
 }
