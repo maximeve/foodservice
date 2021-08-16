@@ -5,51 +5,54 @@ import Card from '../components/Card'
 import './Popular.css'
 
 function Popular() {
-
-    const [coords, setCoords] = useState('')
+    // VARIABLES 
+    const [coords, setCoords] = useState({})
     const [restaurants, setRestaurants] = useState([]);
-    const [labels, setLabels] = useState(restos)
+
+    //METHODS 
 
     const getData = () => {
-        fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&key=AIzaSyBQALPYvs3F79ChAkku1CNdzbDBoU_UIWU`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.215014,4.4123972&radius=500&type=meal_takeaway&key=AIzaSyBQALPYvs3F79ChAkku1CNdzbDBoU_UIWU`)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => setRestaurants(data.results))
             .catch((error) => {
                 console.error('Error:', error);
             })
     }
 
-const onSuccess = (location) => {
-    setCoords({
-        'latitude': location.coords.latitude,
-        'longitude': location.coords.longitude
-    })
-}
-
-const onError = (error) => {
-    console.log(error)
-    setCoords({
-        'latitude': 51.215014,
-        'longitude': 4.4123972
-    })
-}
-
-useEffect(() => {
-    navigator.geolocation.getCurrentPosition(onSuccess, onError)
-    const fetchData = async () => {
-        const data = await getData();
+    const onSuccess = (location) => {
+        setCoords({
+            'latitude': location.coords.latitude,
+            'longitude': location.coords.longitude
+        })
     }
 
-}, []);
+    const onError = (error) => {
+        console.log(error)
+        setCoords({
+            'latitude': 51.215014,
+            'longitude': 4.4123972
+        })
+    }
 
-return (
-    <div className='popular'>
-        <h2>Popular Places</h2>
-        <div className="popular__card">
-            {restaurants.map(resto => <Card name={resto.name} key={resto.id} desc={resto.desc} photo={resto.photograph} address={resto.address} hours={resto.operating_hours} reviews={resto.reviews} cuisine={resto.cuisine_type} />)}
+    useEffect(() => {
+        (async () => {
+            // await navigator.geolocation.getCurrentPosition(onSuccess, onError)
+            const data = await getData();
+         })();
+
+    }, []);
+
+    //HTML
+
+    return (
+        <div className='popular'>
+            <h2>Popular Places</h2>
+            <div className="popular__card">
+                {restaurants.map(resto => <Card name={resto.name} key={resto.place_id} id={resto.place_id} desc={resto.desc} photo={resto.photos[0].photo_reference} address={resto.vicinity} hours={resto.opening_hours} reviews={resto.rating} />)}
+            </div>
         </div>
-    </div>
-)
+    )
 }
 
 export default Popular
