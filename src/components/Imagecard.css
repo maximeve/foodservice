@@ -1,0 +1,7 @@
+.imagecard{
+        display: flex;
+}
+
+.imagecard > img {
+    width: 400px;
+}
