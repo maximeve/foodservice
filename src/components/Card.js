@@ -17,7 +17,7 @@ function Card({ name, id, photo, address, hours, reviews }) {
     return (
         <Link to={`/restaurant/${id}`}>
         <div className="card">
-            <img src={`https://maps.googleapis.com/maps/api/place/photo?photo_reference=${photo}&maxwidth=400&key=AIzaSyBQALPYvs3F79ChAkku1CNdzbDBoU_UIWU`} alt={name} />
+            <img src={`https://maps.googleapis.com/maps/api/place/photo?photo_reference=${photo}&maxwidth=400&key=${process.env.REACT_APP_GOOLE_MAPS}`} alt={name} />
             <h2>{name}</h2>
             <p>{reviews}</p>
             <p>{open ? 'OPEN' : 'CLOSED'}</p>

@@ -12,7 +12,7 @@ function Popular() {
     //METHODS 
 
     const getData = () => {
-        fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.215014,4.4123972&radius=500&type=meal_takeaway&key=AIzaSyBQALPYvs3F79ChAkku1CNdzbDBoU_UIWU`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.215014,4.4123972&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`)
             .then(response => response.json())
             .then(data => setRestaurants(data.results))
             .catch((error) => {
