@@ -6,7 +6,7 @@ import './Popular.css'
 
 function Popular() {
     // VARIABLES 
-    // const [coords, setCoords] = useState({})
+    const [coords, setCoords] = useState({})
     const [restaurants, setRestaurants] = useState([]);
 
     //METHODS 
@@ -28,16 +28,20 @@ function Popular() {
 
     useEffect(() => {
         (async () => {
-            // await navigator.geolocation.getCurrentPosition(onSuccess, onError)
-            await fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.215014,4.4123972&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`)
-            .then(response => response.json())
-            .then(data => setRestaurants(data.results))
-            .catch((error) => {
-                console.error('Error:', error);
-            })
-         })();
+            // navigator.geolocation.getCurrentPosition((position) => {
+            //     setCoords({'latitude' : position.coords.latitude, 'longitude' : position.coords.longitude})
+            // });
+            await fetch(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.219448,4.402464&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`)
+                .then(response => response.json())
+                .then(data => setRestaurants(data.results))
+                .catch((error) => {
+                    console.error('Error:', error);
+                })
+        })();
 
     }, []);
+
+    console.log(restaurants)
 
     //HTML
 
@@ -45,7 +49,7 @@ function Popular() {
         <div className='popular'>
             <h2>Popular Places</h2>
             <div className="popular__card">
-                {restaurants.map(resto => <Card name={resto.name} key={resto.place_id} id={resto.place_id} desc={resto.desc} photo={resto.photos[0].photo_reference} address={resto.vicinity} hours={resto.opening_hours} reviews={resto.rating} />)}
+                {restaurants.map(resto => <Card name={resto.name} key={resto.place_id} id={resto.place_id} desc={resto.desc} photo={resto.photos? resto.photos[0].photo_reference : ''} address={resto.vicinity} hours={resto.opening_hours} reviews={resto.rating} />)}
             </div>
         </div>
     )

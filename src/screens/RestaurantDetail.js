@@ -39,7 +39,6 @@ function RestaurantDetail() {
     return (
         <div>
             <div className="restaurantdetail">
-            // CAROUSSEL
             </div>
             <p>{restaurant.name}</p>
             <p>{rating}</p>
