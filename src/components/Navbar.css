@@ -21,7 +21,9 @@
     object-fit: contain;
 }
 
-.navbar__profile{
-    width: 3rem;
+.navbar__icons > img{
+    width: 2.5rem;
+    padding: 0 1rem;
     object-fit: contain;
+    align-items: center;
 }
