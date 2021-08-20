@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-// import Imagecard from '../components/Imagecard'
+import { RatingView } from 'react-simple-star-rating'
 import './RestaurantDetail.css';
 
 function RestaurantDetail() {
@@ -41,7 +41,7 @@ function RestaurantDetail() {
             <div className="restaurantdetail">
             </div>
             <p>{restaurant.name}</p>
-            <p>{rating}</p>
+            <RatingView ratingValue={rating} />
             {hours.map(day => <p key={day}>{day}</p>)}
         </div>
     )

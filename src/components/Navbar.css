@@ -21,6 +21,11 @@
     object-fit: contain;
 }
 
+.navbar__icons{
+    display: flex;
+    flex-direction: row;
+}
+
 .navbar__icons > img{
     width: 2.5rem;
     padding: 0 1rem;

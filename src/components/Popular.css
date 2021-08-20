@@ -1,9 +1,16 @@
 .popular{
     background-color: #F6F6F4;
+    padding: 20px 10px;
+    border-radius: 20px;
 }
 
 .popular__card{
     display: flex;
     width: 100%;
     overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.popular__card::-webkit-scrollbar {
+    display: none;
 }

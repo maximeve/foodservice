@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
+import { RatingView } from 'react-simple-star-rating'
 
 function Card({ name, id, photo, address, hours, reviews }) {
 
@@ -24,7 +25,7 @@ function Card({ name, id, photo, address, hours, reviews }) {
             }}>
                <div className="card__info">
                 <h2>{name}</h2>
-                <p>{reviews}</p>
+                <RatingView ratingValue={reviews} />
                 <p className="card__open">{open ? 'OPEN' : 'CLOSED'}</p>
                 <p className="card__address">{address}</p>
                 </div>
