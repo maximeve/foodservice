@@ -1,5 +1,51 @@
-.restaurantdetail{
-    display: flex;
-    width: 100%;
-    overflow-x: scroll;
+.restaurantdetail {
+  padding-top: 40px;
+  display: flex;
+  width: 100%;
+}
+
+.restaurantdetail__info {
+  width: 50%;
+}
+.restaurantdetail__img {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.carousel-root {
+  width: 550px;
+}
+
+.slide {
+  height: 500px;
+}
+
+.slide__div {
+  object-fit: contain;
+  height: 100%;
+  position: relative;
+}
+
+.slide__div > img {
+  border-radius: 20px;
+  height: 100%;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+}
+
+.thumb {
+  height: 52px;
+}
+
+.carousel .thumb.selected, .carousel .thumb:hover{
+  border: 3px solid #f1b104
+}
+
+.restaurantdetail__website{
+  display: inline-block;
+  background-color: #f1b104 ;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
