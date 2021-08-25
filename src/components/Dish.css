@@ -1,0 +1,21 @@
+.dish{
+    display: flex;
+    border-radius: 20px;
+    background-color: #F6F6F4;
+    padding: 10px;
+    margin: 10px 10px;
+}
+.dish__details{
+    padding: 0 10px 0;
+}
+.dish__details > button{
+    padding:  10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1b104;
+    color: white;
+}
+.dish__img{
+    object-fit: contain;
+    width: 120px;
+}
