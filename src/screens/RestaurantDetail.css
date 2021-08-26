@@ -1,4 +1,6 @@
 .restaurantdetail {
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 40px;
   display: flex;
   width: 100%;
@@ -14,7 +16,7 @@
 }
 
 .carousel-root {
-  width: 650px;
+  min-width: 600px;
 }
 
 .slide {
@@ -68,4 +70,23 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 650px) {
+  .restaurantdetail {
+    display: flex;
+    flex-direction: column;
+  }
+  .restaurantdetail__info {
+    width: 100%;
+  }
+  .restaurantdetail__img {
+    width: 100%;
+  }
+  .carousel-root {
+    min-width: 200px;
+  }
+  .slide {
+    height: 300px;
+  }
 }
