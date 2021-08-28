@@ -1,6 +1,7 @@
 .restaurantdetail {
   padding-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
