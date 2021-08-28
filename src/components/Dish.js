@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
+import { useSelector } from 'react-redux';
 import './Dish.css'
 
 
 // NOG EEN ID NODIG PROPS
 
 function Dish(props) {
-
+  const menuItems = useSelector( state => state.menu.menu)
+  
   const dishName = useRef(null)
   const dishPrice = useRef(null)
   const dishPic = useRef(null)

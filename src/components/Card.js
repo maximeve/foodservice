@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
-import { RatingView } from 'react-simple-star-rating'
+import { RatingView } from 'react-simple-star-rating';
 
 function Card({ name, id, photo, address, hours, reviews }) {
 
