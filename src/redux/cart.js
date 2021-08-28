@@ -3,22 +3,20 @@ import { createSlice } from '@reduxjs/toolkit'
 export const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    value: 0
+    value: 0,
+    items : []
   },
   reducers: {
-    increment: state => {
-      state.value += 1
+    addcart: (state, action) => {
+      state.items = action.payload
     },
-    decrement: state => {
-      state.value -= 1
+    removecart: (state, action) => {
+      state.items = action.payload
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    }
   }
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = cartSlice.actions
+export const { addcart, removecart } = cartSlice.actions
 
 export default cartSlice.reducer

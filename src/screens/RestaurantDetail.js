@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import { RatingView } from "react-simple-star-rating";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -8,6 +9,8 @@ import Navbar from "../components/Navbar";
 import Dish from "../components/Dish";
 
 function RestaurantDetail() {
+  const cartItems = useSelector( state => state.cart.items)
+
   const [restaurant, setRestaurant] = useState("");
   const [hours, setHours] = useState([]);
   const [images, setImages] = useState([]);
@@ -19,11 +22,7 @@ function RestaurantDetail() {
     console.log(data);
     setRestaurant(data.result);
     setWebsite(data.result.website);
-    data.result.photos.map((photo) => {
-      images.push(
-        `https://maps.googleapis.com/maps/api/place/photo?photo_reference=${photo.photo_reference}&maxwidth=400&key=${process.env.REACT_APP_GOOLE_MAPS}`
-      );
-    });
+    data.result.photos.map((photo) => {images.push(`https://maps.googleapis.com/maps/api/place/photo?photo_reference=${photo.photo_reference}&maxwidth=400&key=${process.env.REACT_APP_GOOLE_MAPS}`)});
     if (data.result.opening_hours) {
       setHours(data.result.opening_hours.weekday_text);
     } else {
@@ -67,11 +66,7 @@ function RestaurantDetail() {
         </div>
         <div className="restaurantdetail__img">
           <Carousel>
-            {images.map((image) => (
-              <div className="slide__div">
-                <img src={image} alt="food" />
-              </div>
-            ))}
+            {images.map((image) => (<div className="slide__div"><img src={image} alt="food" /></div>))}
           </Carousel>
         </div>
       </div>
@@ -139,12 +134,11 @@ function RestaurantDetail() {
         />
       </div>
       <div className="restaurantdetails__dish">
-        <Dish />
-        <Dish />
-        <Dish />
-        <Dish />
-        <Dish />
-        <Dish />
+      {/* FUNCTIE EN ID PASSEREN DIE ITEMS ADD AAN REDUX */}
+      <Dish />
+      <Dish />
+      <Dish />
+      <Dish />
       </div>
     </React.Fragment>
   );
