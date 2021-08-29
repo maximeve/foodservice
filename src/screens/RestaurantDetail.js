@@ -9,7 +9,10 @@ import Navbar from "../components/Navbar";
 import Dish from "../components/Dish";
 
 function RestaurantDetail() {
-  const cartItems = useSelector( state => state.cart.items)
+  const cartItems = useSelector( state => state.menu.menu)
+  const cart = useSelector( state => state.cart.items)
+
+  const [randomCuisine,setRandomCuisine] = useState('')
 
   const [restaurant, setRestaurant] = useState("");
   const [hours, setHours] = useState([]);
@@ -17,6 +20,16 @@ function RestaurantDetail() {
   const [rating, setRating] = useState("");
   const [website, setWebsite] = useState("");
   let { id } = useParams();
+
+  const getRandomInt = () => {
+    const math = Math.floor(Math.random()*2);
+    if (math === 0){
+      setRandomCuisine('asian')
+    }
+    if (math === 1){
+      setRandomCuisine('italian')
+    }
+  }
 
   const handleData = (data) => {
     setRestaurant(data.result);
@@ -44,6 +57,7 @@ function RestaurantDetail() {
         });
     }
     fetchData();
+    getRandomInt()
   }, [id]);
 
   return (
@@ -55,7 +69,7 @@ function RestaurantDetail() {
           <h2>{restaurant.name}</h2>
           <RatingView ratingValue={rating} />
           {hours.map((day) => (
-            <p key={day}>{day}</p>
+            <p className="restaurantdetail__hours" key={day}>{day}</p>
           ))}
           <p className="restaurantdetail__website">
             <a href={website} target="_blank" rel="noreferrer">
@@ -134,10 +148,7 @@ function RestaurantDetail() {
       </div>
       <div className="restaurantdetails__dish">
       {/* FUNCTIE EN ID PASSEREN DIE ITEMS ADD AAN REDUX */}
-      <Dish />
-      <Dish />
-      <Dish />
-      <Dish />
+      {cartItems.italian.map(cartItem => <Dish desc={cartItem.description} name={cartItem.name} picture={cartItem.picture} price={cartItem.price}/>)}
       </div>
     </React.Fragment>
   );

@@ -1,12 +1,18 @@
 .dish{
+    width: 350px;
     display: flex;
     border-radius: 20px;
     background-color: #F6F6F4;
-    padding: 10px;
+    padding: 0px;
     margin: 10px 10px;
 }
 .dish__details{
+    width: 70%;
     padding: 0 10px 0;
+}
+
+.dish__details > p {
+    color: rgb(116, 116, 116);
 }
 .dish__details > button{
     padding:  10px 20px;
@@ -14,10 +20,13 @@
     border: none;
     background-color: #f1b104;
     color: white;
+    cursor: pointer;
 }
 .dish__img{
+    width: 30%;
     object-fit: contain;
-    width: 120px;
+    width: 150px;
+    border-radius: 20px;
 }
 @media only screen and (max-width: 650px) {
    .dish{
@@ -25,7 +34,7 @@
     display: flex;
     border-radius: 20px;
     background-color: #F6F6F4;
-    padding: 10px;
+    padding: 0px;
     margin: 10px 10px;
 } 
 }

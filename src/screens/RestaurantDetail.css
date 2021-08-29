@@ -80,6 +80,12 @@
   }
   .restaurantdetail__info {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .restaurantdetail__hours{
+    display: none;
   }
   .restaurantdetail__img {
     width: 100%;
