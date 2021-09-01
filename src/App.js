@@ -7,6 +7,7 @@ import {
 
 import Home from './screens/Home'
 import RestaurantDetail from './screens/RestaurantDetail'
+import Cart from './screens/Cart'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/cart" exact>
+              <Cart />
             </Route>
             <Route path="/restaurant/:id" >
               <RestaurantDetail />

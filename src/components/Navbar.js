@@ -14,8 +14,8 @@ function Navbar() {
                     <li>CONTACT</li>
                 </ul>
                 <div className="navbar__icons">
-                <img src="/assets/cart.png" alt="cart" className="navbar__cart"/>
-                <img src="/assets/profilepic.png" alt="profile" className="navbar__profile"/>
+                <Link to='/Cart'><img src="/assets/cart.png" alt="cart" className="navbar__cart"/></Link>
+                <Link to='/'><img src="/assets/profilepic.png" alt="profile" className="navbar__profile"/></Link>
                 </div>
             </nav>
         </div>

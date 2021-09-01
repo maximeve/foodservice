@@ -10,7 +10,6 @@ import Dish from "../components/Dish";
 
 function RestaurantDetail() {
   const cartItems = useSelector( state => state.menu.menu)
-  const cart = useSelector( state => state.cart.items)
 
   const [randomCuisine,setRandomCuisine] = useState('')
 

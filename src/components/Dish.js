@@ -22,7 +22,6 @@ function Dish({desc,name,picture,price}) {
       'photo': dishPic.current.currentSrc,
     }
     dispatch(addcart(cartItem))
-    console.log(cartItem)
   }
 
   return (
