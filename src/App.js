@@ -4,14 +4,20 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import Home from './screens/Home'
-import RestaurantDetail from './screens/RestaurantDetail'
-import Cart from './screens/Cart'
+import Home from './screens/Home';
+import RestaurantDetail from './screens/RestaurantDetail';
+import Cart from './screens/Cart';
+import CartModal from './components/CartModal'
 
 function App() {
+
+  const modalState = useSelector((state) => state.cart.modalIsOpen);
+
   return (
     <div className="App">
+      { modalState ? <CartModal/> : ''}
       <Router>
           <Switch>
             <Route path="/" exact>

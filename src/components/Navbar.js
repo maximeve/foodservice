@@ -1,8 +1,16 @@
 import React from 'react'
 import './Navbar.css'
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { modalState } from '../redux/cart'
 
 function Navbar() {
+    const dispatch = useDispatch();
+
+    const modalHandler = ()=>{
+        dispatch(modalState())
+    }
+
     return (
         <div>
             <nav className="navbar">
@@ -14,7 +22,7 @@ function Navbar() {
                     <li>CONTACT</li>
                 </ul>
                 <div className="navbar__icons">
-                <Link to='/Cart'><img src="/assets/cart.png" alt="cart" className="navbar__cart"/></Link>
+                <img onClick={modalHandler} src="/assets/cart.png" alt="cart" className="navbar__cart"/>
                 <Link to='/'><img src="/assets/profilepic.png" alt="profile" className="navbar__profile"/></Link>
                 </div>
             </nav>

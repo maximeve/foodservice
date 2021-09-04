@@ -1,0 +1,20 @@
+.cartmodal{
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    border: 1px solid #f1b104;
+}
+
+.cartmodal__item{
+    display: flex;
+    align-items: center;
+}
+
+.cartmodal__item > p {
+    margin: 10px;
+}

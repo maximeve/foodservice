@@ -32,3 +32,11 @@
     object-fit: contain;
     align-items: center;
 }
+
+.navbar__cart{
+    width: 2.5rem;
+    padding: 0 1rem;
+    object-fit: contain;
+    align-items: center;
+    cursor: pointer;
+}
