@@ -1,27 +1,39 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 export const cartSlice = createSlice({
-  name: 'cart',
+  name: "cart",
   initialState: {
     value: 0,
-    items : [],
-    modalIsOpen : false
+    items: [],
+    modalIsOpen: false,
   },
   reducers: {
     addcart: (state, action) => {
-      state.items = [...state.items,action.payload]
-      console.log(state.items)
+      const itemIndex = state.items.findIndex((item) => item.dish === action.payload.dish)
+      if (itemIndex >= 0){
+        state.items[itemIndex].qty += 1;
+      }
+      else {
+        state.items.push(action.payload)
+      }
     },
     removecart: (state, action) => {
-      state.items = action.payload
+      const itemIndex = state.items.findIndex((item) => item.dish === action.payload.dish)
+      if (itemIndex > 1){
+        state.items[itemIndex].qty -= 1;
+      }
+      else if(state.items[itemIndex].qty === 1){
+        const nextCartItems = state.items.filter(cartItem => cartItem.dish !== action.payload.dish)
+        state.items = nextCartItems
+      }
     },
     modalState: (state) => {
       state.modalIsOpen = !state.modalIsOpen;
-    }
-  }
-})
+    },
+  },
+});
 
 // Action creators are generated for each case reducer function
-export const { addcart, removecart, modalState } = cartSlice.actions
+export const { addcart, removecart, modalState } = cartSlice.actions;
 
-export default cartSlice.reducer
+export default cartSlice.reducer;

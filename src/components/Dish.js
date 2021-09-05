@@ -20,6 +20,7 @@ function Dish({desc,name,picture,price}) {
       'desc': dishDesc.current.innerHTML,
       'price': dishPrice.current.innerHTML,
       'photo': dishPic.current.currentSrc,
+      'qty': 1
     }
     dispatch(addcart(cartItem))
   }
