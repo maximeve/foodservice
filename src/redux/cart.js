@@ -19,7 +19,7 @@ export const cartSlice = createSlice({
     },
     removecart: (state, action) => {
       const itemIndex = state.items.findIndex((item) => item.dish === action.payload.dish)
-      if (itemIndex > 1){
+      if (itemIndex >= 1){
         state.items[itemIndex].qty -= 1;
       }
       else if(state.items[itemIndex].qty === 1){

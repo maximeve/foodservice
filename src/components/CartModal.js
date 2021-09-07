@@ -7,23 +7,6 @@ function CartModal() {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch()
 
-  const CartHandler = (action, item) => {
-    console.log('test')
-    let cartItem = {
-      'dish': item.dish,
-      'desc': item.desc,
-      'price': item.price,
-      'photo': item.photo,
-      'qty': 1
-    }
-    if (item === 'add'){
-      dispatch(addcart(cartItem))
-    }
-    if (item === 'remove') {
-      dispatch(removecart(cartItem))
-    }
-  }
-
   return (
     <div className="cartmodal">
       <ul>
@@ -33,9 +16,9 @@ function CartModal() {
             <p>{item.dish}</p>
             <p>{item.price}</p>
             <div className="cartmodal__item_input">
-            <button onClick={CartHandler('remove', item)}>-</button>
+            <button onClick={() => { dispatch(removecart(item))}}>-</button>
             <input type="number" value={item.qty}/>
-            <button onClick={CartHandler('add', item)}>+</button>
+            <button onClick={() => { dispatch(addcart(item))}}>+</button>
             </div>
           </li>
         ))}
