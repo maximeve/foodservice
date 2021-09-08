@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector,useDispatch } from "react-redux";
 import "./CartModal.css";
 import { addcart,removecart } from '../redux/cart';
-import { modalState } from '../redux/cart'
+import { modalState } from '../redux/cart';
+import { Link } from "react-router-dom";
 
 function CartModal() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -13,7 +14,7 @@ function CartModal() {
 }
 
   return (
-    <>
+    <React.Fragment>
     <div onClick={modalHandler} className="cartmodal__background"></div>
     <div className="cartmodal">
       <ul>
@@ -30,8 +31,9 @@ function CartModal() {
           </li>
         ))}
       </ul>
+      <Link to='/cart' onClick={modalHandler}>To Cart</Link>
     </div>
-    </>
+    </React.Fragment>
   );
 }
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -16,7 +17,7 @@ function App() {
   const modalState = useSelector((state) => state.cart.modalIsOpen);
 
   return (
-    <>
+    <React.Fragment>
     { modalState ? <CartModal/> : ''}
     <div className="App">
       <Router>
@@ -33,7 +34,7 @@ function App() {
           </Switch>
       </Router>
     </div>
-    </>
+    </React.Fragment>
   );
 }
 
