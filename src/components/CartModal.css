@@ -10,6 +10,15 @@
     border: 1px solid #f1b104;
 }
 
+.cartmodal__background{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+}
+
 .cartmodal__item{
     display: flex;
     align-items: center;

@@ -1,13 +1,20 @@
 import React from "react";
 import { useSelector,useDispatch } from "react-redux";
 import "./CartModal.css";
-import { addcart,removecart } from '../redux/cart'
+import { addcart,removecart } from '../redux/cart';
+import { modalState } from '../redux/cart'
 
 function CartModal() {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch()
 
+  const modalHandler = ()=>{
+    dispatch(modalState())
+}
+
   return (
+    <>
+    <div onClick={modalHandler} className="cartmodal__background"></div>
     <div className="cartmodal">
       <ul>
         {cartItems.map((item) => (
@@ -24,6 +31,7 @@ function CartModal() {
         ))}
       </ul>
     </div>
+    </>
   );
 }
 

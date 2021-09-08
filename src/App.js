@@ -16,8 +16,9 @@ function App() {
   const modalState = useSelector((state) => state.cart.modalIsOpen);
 
   return (
+    <>
+    { modalState ? <CartModal/> : ''}
     <div className="App">
-      { modalState ? <CartModal/> : ''}
       <Router>
           <Switch>
             <Route path="/" exact>
@@ -32,6 +33,7 @@ function App() {
           </Switch>
       </Router>
     </div>
+    </>
   );
 }
 
