@@ -47,3 +47,13 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
+
+.cartmodal__button{
+    margin-top: 20px;
+    background-color: #f1b104;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 0px;
+}

@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 import Home from './screens/Home';
 import RestaurantDetail from './screens/RestaurantDetail';
-import Cart from './screens/Cart';
+import CartPage from './screens/CartPage';
 import CartModal from './components/CartModal'
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/cart" exact>
-              <Cart />
+            <Route path="/cart" >
+              <CartPage />
             </Route>
             <Route path="/restaurant/:id" >
               <RestaurantDetail />

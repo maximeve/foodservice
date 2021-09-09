@@ -31,7 +31,7 @@ function CartModal() {
           </li>
         ))}
       </ul>
-      <Link to='/cart' onClick={modalHandler}>To Cart</Link>
+      <Link to='/cart'><button onClick={modalHandler} className='cartmodal__button'>To Cart</button></Link>
     </div>
     </React.Fragment>
   );
