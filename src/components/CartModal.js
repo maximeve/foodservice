@@ -31,7 +31,7 @@ function CartModal() {
           </li>
         ))}
       </ul>
-      <Link to='/cart'><button onClick={modalHandler} className='cartmodal__button'>To Cart</button></Link>
+      { cartItems.length > 0 ? <Link to='/cart'><button onClick={modalHandler} className='cartmodal__button'>To Cart</button></Link> : ''} 
     </div>
     </React.Fragment>
   );

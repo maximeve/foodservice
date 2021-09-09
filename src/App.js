@@ -25,11 +25,11 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/cart" >
-              <CartPage />
-            </Route>
             <Route path="/restaurant/:id" >
               <RestaurantDetail />
+            </Route>
+            <Route path="/cart" >
+              <CartPage />
             </Route>
           </Switch>
       </Router>
