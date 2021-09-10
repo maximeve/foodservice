@@ -18,10 +18,10 @@ function App() {
 
   return (
     <React.Fragment>
-    { modalState ? <CartModal/> : ''}
     <div className="App">
       <Router>
           <Switch>
+            { modalState ? <CartModal/> : ''}
             <Route path="/" exact>
               <Home />
             </Route>
