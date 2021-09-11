@@ -2,10 +2,14 @@ import React from 'react'
 import './Navbar.css'
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { modalState } from '../redux/cart'
+import { modalState } from '../redux/cart';
+import CartModal from '../components/CartModal'
+import { useSelector } from "react-redux";
 
 function Navbar() {
     const dispatch = useDispatch();
+
+    const modalStatecurrent = useSelector((state) => state.cart.modalIsOpen);
 
     const modalHandler = () => {
         dispatch(modalState())
@@ -26,6 +30,7 @@ function Navbar() {
                     <Link to='/'><img src="/assets/profilepic.png" alt="profile" className="navbar__profile" /></Link>
                 </div>
             </nav>
+            { modalStatecurrent ? <CartModal/> : ''}
         </div>
     )
 }

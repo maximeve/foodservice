@@ -4,18 +4,17 @@ import { useSelector } from "react-redux";
 
 function CartPage() {
   const cartItems = useSelector((state) => state.cart.items);
-  
+
   return (
-    <React.Fragment>
+    <div className='cartpage'>
       <Navbar />
-      <div>
         <h1>THIS IS CARTPAGE</h1>
-      <ul>
-        {cartItems.map((item) => (
-          <li>{item.dish}</li>
-        ))}
-      </ul></div>
-    </React.Fragment>
+        <ul>
+          {cartItems.map((item) => (
+            <li>{item.dish}</li>
+          ))}
+        </ul>
+   </div>
   );
 }
 

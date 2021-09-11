@@ -1,4 +1,6 @@
 .restaurantdetail {
+  max-width: 1600px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   padding-top: 40px;
@@ -67,6 +69,8 @@
 }
 
 .restaurantdetails__dish{
+  max-width: 1600px;
+  margin: auto;
   margin-top: 30px;
   width: 100%;
   display: flex;

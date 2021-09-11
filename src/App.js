@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 import Home from './screens/Home';
 import RestaurantDetail from './screens/RestaurantDetail';
 import CartPage from './screens/CartPage';
-import CartModal from './components/CartModal'
 
 function App() {
 
@@ -21,7 +20,6 @@ function App() {
     <div className="App">
       <Router>
           <Switch>
-            { modalState ? <CartModal/> : ''}
             <Route path="/" exact>
               <Home />
             </Route>
