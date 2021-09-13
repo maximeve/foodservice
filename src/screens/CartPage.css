@@ -2,3 +2,30 @@
 max-width: 1600px;
 margin: auto;
 }
+
+.cartpage > ul{
+    list-style-type: none;
+} 
+
+.cartpage > ul > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartpage__item{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.cartpage__item > img{
+    width: 50px;
+    padding: 0 10px 0 0;
+}
+
+.cartpage__orderbutton{
+    padding: 10px 20px;
+    background-color: #f1b104;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}

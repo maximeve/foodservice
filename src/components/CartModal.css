@@ -59,3 +59,16 @@ input[type=number] {
     outline: none;
     border: 0px;
 }
+
+.cartmodal__qty{
+    background-color: #f1b104;
+    color: white;
+    padding: 3px 10px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 0px 2px;
+}
+
+.cartmodal__item_input > input{
+    border: #f1b104;
+}

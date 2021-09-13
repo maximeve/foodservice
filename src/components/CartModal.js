@@ -24,9 +24,9 @@ function CartModal() {
             <p>{item.dish}</p>
             <p>{item.price}</p>
             <div className="cartmodal__item_input">
-            <button onClick={() => { dispatch(removecart(item))}}>-</button>
+            <button className="cartmodal__qty" onClick={() => { dispatch(removecart(item))}}>-</button>
             <input type="number" value={item.qty}/>
-            <button onClick={() => { dispatch(addcart(item))}}>+</button>
+            <button className="cartmodal__qty" onClick={() => { dispatch(addcart(item))}}>+</button>
             </div>
           </li>
         ))}
