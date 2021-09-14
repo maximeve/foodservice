@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useEffect, useState} from "react";
 import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import './CartPage.css'
@@ -6,12 +6,18 @@ import './CartPage.css'
 function CartPage() {
   const cartItems = useSelector((state) => state.cart.items);
   const total = cartItems.map(item => ({ ...item, total:parseInt(item.price)*item.qty}))
+  var [totalAmount,settotalAmount] = useState()
+
+  useEffect(() => {
+    var count = total.map(x => count += x.total)
+    settotalAmount(count)
+    console.log(count)
+  }, [cartItems])
   
-  console.log(total)
   return (
     <div className='cartpage'>
       <Navbar />
-        <h1>THIS IS CARTPAGE</h1>
+        <h1>Cart</h1>
         <ul>
           {total.map((item) => (
             <li>
@@ -24,7 +30,7 @@ function CartPage() {
               </li>
           ))}
         </ul>
-        <div className='cartpage__total'></div>
+        <div className='cartpage__total'>{totalAmount}</div>
         <button className='cartpage__orderbutton'>Order</button>
    </div>
   );
