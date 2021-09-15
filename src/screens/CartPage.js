@@ -9,9 +9,10 @@ function CartPage() {
   var [totalAmount,settotalAmount] = useState()
 
   useEffect(() => {
-    var count = total.map(x => count += x.total)
-    settotalAmount(count)
-    console.log(count)
+    let totalPrice = total.reduce(function (accumulator, item) {
+      return accumulator + item.total;
+    }, 0);
+    settotalAmount(totalPrice)
   }, [cartItems])
   
   return (
