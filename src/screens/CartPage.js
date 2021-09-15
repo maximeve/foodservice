@@ -25,14 +25,15 @@ function CartPage() {
               <div className='cartpage__item'>
               <img src={item.photo} alt={item.dish}/><h3>{item.dish}</h3>&nbsp;<p>x</p>&nbsp;<h4>{item.qty}</h4>
               </div>
-              <div>
+              <div className="cartpage__total">
               <h4>{item.total}€</h4>
               </div>
               </li>
           ))}
         </ul>
-        <div className='cartpage__total'>{totalAmount}</div>
-        <button className='cartpage__orderbutton'>Order</button>
+        <div className='cartpage__checkout'> <button className='cartpage__orderbutton'>Order</button>
+        <h3>{totalAmount}€</h3>
+       </div>
    </div>
   );
 }

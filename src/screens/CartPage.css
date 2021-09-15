@@ -7,13 +7,22 @@ margin: auto;
     list-style-type: none;
 } 
 
+.cartpage__checkout{
+    border-top: 2px solid black;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
 .cartpage > ul > li {
     display: flex;
     justify-content: space-between;
 }
 
 .cartpage__item{
-    margin: 20px 0;
+    margin: 10px 0;
     display: flex;
     align-items: center;
 }

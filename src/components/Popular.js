@@ -32,7 +32,7 @@ function Popular() {
       //     setCoords({'latitude' : position.coords.latitude, 'longitude' : position.coords.longitude})
       // });
       await fetch(
-        `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.219448,4.402464&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`
+        `https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.219448,4.402464&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`
       )
         .then((response) => response.json())
         .then((data) => {
