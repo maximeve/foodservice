@@ -1,0 +1,26 @@
+.banner{
+    width: 100%;
+    background-color: #F1B104;
+    display: flex;
+    flex-direction: row;
+}
+
+.banner > h1 {
+    padding: 10px;
+    width: 30%;
+}
+
+@media only screen and (max-width: 650px) {
+    .banner > h1 {
+        width: 100%;
+    }
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    svg{
+        max-width: 350px;
+    }
+  }
