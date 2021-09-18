@@ -21,8 +21,13 @@
     opacity: 0.7;
 }
 
+.cartmodal > ul {
+    margin: 0;
+    padding-left: 0;
+}
 .cartmodal__item{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 10px 0;
 }
@@ -51,6 +56,8 @@ input[type=number] {
 }
 
 .cartmodal__button{
+    display: flex;
+    justify-content: flex-end;
     margin-top: 20px;
     background-color: #f1b104;
     color: white;

@@ -45,7 +45,7 @@ function RestaurantDetail() {
   useEffect(() => {
     async function fetchData() {
       await fetch(
-        `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${id}&fields=name,opening_hours,photos,rating,website,reviews,types&key=${process.env.REACT_APP_GOOLE_MAPS}`
+        `https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/details/json?place_id=${id}&fields=name,opening_hours,photos,rating,website,reviews,types&key=${process.env.REACT_APP_GOOLE_MAPS}`
       )
         .then((response) => response.json())
         .then((data) => {

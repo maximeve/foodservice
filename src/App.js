@@ -10,6 +10,9 @@ import { useSelector } from "react-redux";
 import Home from './screens/Home';
 import RestaurantDetail from './screens/RestaurantDetail';
 import CartPage from './screens/CartPage';
+import AccountPage from './screens/AccountPage';
+import ServicesPage from './screens/ServicesPage';
+import ContactPage from './screens/ContactPage';
 
 function App() {
 
@@ -23,11 +26,20 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
+            <Route path="/services" exact>
+              <ServicesPage />
+            </Route>
+            <Route path="/contact" exact>
+              <ContactPage />
+            </Route>
             <Route path="/restaurant/:id" >
               <RestaurantDetail />
             </Route>
             <Route path="/cart" >
               <CartPage />
+            </Route>
+            <Route path="/account" >
+              <AccountPage />
             </Route>
           </Switch>
       </Router>

@@ -21,13 +21,12 @@ function Navbar() {
                 <Link to='/'>
                     <img src="/assets/Foodlogo.png" alt="Logo" className="navbar__logo" /></Link>
                 <ul>
-                    <li>Why X</li>
-                    <li>SERVICES</li>
-                    <li>CONTACT</li>
+                    <li><Link to='/services'>SERVICES</Link></li>
+                    <li><Link to='/services'>CONTACT</Link></li>
                 </ul>
                 <div className="navbar__icons">
                     <img onClick={modalHandler} src="/assets/cart.png" alt="cart" className="navbar__cart" />
-                    <Link to='/'><img src="/assets/profilepic.png" alt="profile" className="navbar__profile" /></Link>
+                    <Link to='/account'><img src="/assets/profilepic.png" alt="profile" className="navbar__profile" /></Link>
                 </div>
             </nav>
             { modalStatecurrent ? <CartModal/> : ''}

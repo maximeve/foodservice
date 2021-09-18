@@ -10,8 +10,12 @@
 .navbar > ul {
     display: flex;
     list-style: none;
-    font-weight: 800;
     justify-content: center;
+}
+
+.navbar > ul > li > a{
+    color: black;
+    font-weight: 800;
 }
 
 .navbar > ul > li {

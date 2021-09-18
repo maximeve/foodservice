@@ -11,6 +11,11 @@
     padding: 0 10px 0;
 }
 
+.dish__details__price{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
 .dish__details > p {
     color: rgb(116, 116, 116);
 }

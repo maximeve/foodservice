@@ -30,7 +30,7 @@ function Dish({desc,name,picture,price}) {
       <div className='dish__details'>
         <h3 ref={dishName} >{name}</h3>
         <p ref={dishDesc}>{desc}</p>
-        <p ref={dishPrice}>{price}</p>
+        <p ref={dishPrice} className="dish__details__price">{price}</p>
         <button onClick={addCartHandler}>ADD TO CART</button>
       </div>
       <img src={picture} className="dish__img" ref={dishPic} alt='food'/>
