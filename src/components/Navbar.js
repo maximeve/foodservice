@@ -22,7 +22,7 @@ function Navbar() {
                     <img src="/assets/Foodlogo.png" alt="Logo" className="navbar__logo" /></Link>
                 <ul>
                     <li><Link to='/services'>SERVICES</Link></li>
-                    <li><Link to='/services'>CONTACT</Link></li>
+                    <li><Link to='/contact'>CONTACT</Link></li>
                 </ul>
                 <div className="navbar__icons">
                     <img onClick={modalHandler} src="/assets/cart.png" alt="cart" className="navbar__cart" />
