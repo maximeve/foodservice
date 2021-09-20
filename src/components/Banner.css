@@ -15,11 +15,14 @@
 @media only screen and (max-width: 650px) {
     .banner > h1 {
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .banner {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     svg{
