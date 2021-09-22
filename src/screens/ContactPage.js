@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from '../components/Navbar';
-import './ContactPage.css'
+import './ContactPage.css';
+import Footer from '../components/Footer';
 
 function ContactPage() {
   return (
@@ -32,6 +33,7 @@ function ContactPage() {
         <div><h3>Los Angeles</h3><p>340 Main St. Venice<br/>CA 90210 USA</p></div>
       </div>
       </div>
+      <Footer />
     </>
   );
 }
