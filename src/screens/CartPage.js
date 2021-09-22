@@ -2,6 +2,7 @@ import React,{useEffect, useState} from "react";
 import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import './CartPage.css'
+import Footer from '../components/Footer';
 
 function CartPage() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -16,6 +17,7 @@ function CartPage() {
   }, [cartItems])
   
   return (
+    <>
     <div className='cartpage'>
       <Navbar />
         <h1>Cart</h1>
@@ -35,6 +37,8 @@ function CartPage() {
         <h3>{totalAmount}€</h3>
        </div>
    </div>
+   <Footer />
+   </>
   );
 }
 

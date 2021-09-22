@@ -1,3 +1,8 @@
+.contactcontainer{
+    max-width: 1600px;
+    margin: auto;
+}
+
 .contact{
     margin-top: 20px;
     display: flex;

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "./ServicesPage.css";
+import Footer from '../components/Footer';
 
 function ServicesPage() {
   return (
@@ -68,6 +69,7 @@ function ServicesPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -4,11 +4,11 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer">
-      <div>
-        <img src="" />
-        <img src="" />
+      <div className="footer_logo">
+        <img src="/assets/Foodlogo.png" id="footer__mainlogo"/>
+        <img src="/assets/delivery.png" id="footer__deliverylogo"/>
       </div>
-      <div>
+      <div className="footer__options">
         <div>
           <ul>
             <li>Get Help</li>

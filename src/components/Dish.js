@@ -4,8 +4,6 @@ import { useDispatch } from 'react-redux';
 import './Dish.css'
 
 
-// NOG EEN ID NODIG PROPS
-
 function Dish({desc,name,picture,price}) {
   const dispatch = useDispatch();
   

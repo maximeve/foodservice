@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Popular from "../components/Popular";
 import Banner from "../components/Banner";
+import Footer from '../components/Footer';
 import "./Home.css";
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
       <Hero />
       <Popular />
       <Banner />
+      <Footer />
     </div>
   );
 }
