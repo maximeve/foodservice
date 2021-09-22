@@ -1,10 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Footer from '../components/Footer';
 
 function AccountPage() {
   return (
-    <div>
+    <>
       <Navbar />
       <div className="profileScreen__body">
         <h1>Edit Profile</h1>
@@ -21,8 +20,7 @@ function AccountPage() {
           </div>
         </div>
       </div>
-      <Footer/>
-    </div>
+    </>
   );
 }
 

@@ -13,6 +13,7 @@ import CartPage from './screens/CartPage';
 import AccountPage from './screens/AccountPage';
 import ServicesPage from './screens/ServicesPage';
 import ContactPage from './screens/ContactPage';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             </Route>
           </Switch>
       </Router>
+      <Footer />
     </div>
     </React.Fragment>
   );

@@ -7,7 +7,6 @@ import { Carousel } from "react-responsive-carousel";
 import "./RestaurantDetail.css";
 import Navbar from "../components/Navbar";
 import Dish from "../components/Dish";
-import Footer from '../components/Footer';
 
 function RestaurantDetail() {
   const cartItems = useSelector( state => state.menu.menu)
@@ -150,7 +149,6 @@ function RestaurantDetail() {
       {/* FUNCTIE EN ID PASSEREN DIE ITEMS ADD AAN REDUX */}
       {cartItems.italian.map(cartItem => <Dish desc={cartItem.description} name={cartItem.name} picture={cartItem.picture} price={cartItem.price}/>)}
       </div>
-      <Footer />
     </React.Fragment>
   );
 }
