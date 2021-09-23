@@ -26,7 +26,19 @@
     background-color: #f1b104;
     color: white;
     cursor: pointer;
+    box-shadow: 0 2px rgb(219, 219, 219);
 }
+
+.dish__details > button:hover{
+    background-color: #d49d04;
+}
+
+.dish__details > button:active {
+    background-color: #d49d04;
+    box-shadow: 0 1px rgb(219, 219, 219);
+    transform: translateY(2px);
+  }
+
 .dish__img{
     width: 30%;
     object-fit: contain;

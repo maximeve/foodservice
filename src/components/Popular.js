@@ -44,8 +44,6 @@ function Popular() {
     })();
   }, []);
 
-  console.log(restaurants);
-
   //HTML
 
   return (
