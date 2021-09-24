@@ -25,6 +25,7 @@
 .navbar__logo{
     width: 3rem;
     object-fit: contain;
+    padding: 0 1rem;
 }
 
 .navbar__icons{

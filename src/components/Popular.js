@@ -1,38 +1,44 @@
 import React, { useState, useEffect } from "react";
 import restos from "../restaurants";
 import Card from "../components/Card";
+import { setlocation } from '../redux/location';
+import { useSelector,useDispatch } from "react-redux";
 
 import "./Popular.css";
 
 function Popular() {
   // VARIABLES
+  const dispatch = useDispatch()
+  const location = useSelector((state) => state.location.location);
   const [coords, setCoords] = useState({});
   const [restaurants, setRestaurants] = useState([]);
 
   //METHODS
 
-  // const onSuccess = (location) => {
-  //     setCoords({
-  //         'latitude': location.coords.latitude,
-  //         'longitude': location.coords.longitude
-  //     })
-  // }
+  const onSuccess = (location) => {
+    dispatch(setlocation({
+      'latitude': location.coords.latitude,
+      'longitude': location.coords.longitude
+    }))
+  }
 
-  // const onError = (error) => {
-  //     console.log(error)
-  //     setCoords({
-  //         'latitude': 51.215014,
-  //         'longitude': 4.4123972
-  //     })
-  // }
+  const onError = (error) => {
+    dispatch(setlocation({
+      'latitude': 51.215014,
+      'longitude': 4.4123972
+    }))
+  }
 
   useEffect(() => {
     (async () => {
-      // navigator.geolocation.getCurrentPosition((position) => {
-      //     setCoords({'latitude' : position.coords.latitude, 'longitude' : position.coords.longitude})
-      // });
+      navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    })();
+  }, []);
+
+  useEffect(() => {
+    (async () => {
       await fetch(
-        `https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.219448,4.402464&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`
+        `https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.latitude},${location.longitude}&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -42,8 +48,9 @@ function Popular() {
           console.error("Error:", error);
         });
     })();
-  }, []);
+  }, [coords]);
 
+  console.log(coords)
   //HTML
 
   return (

@@ -4,6 +4,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer">
+    <div className='footer__container'>
       <div className="footer_logo">
         <img src="/assets/Foodlogo.png" id="footer__mainlogo"/>
         <img src="/assets/delivery.png" id="footer__deliverylogo"/>
@@ -27,6 +28,7 @@ function Footer() {
             <li>About Uber Eats</li>
           </ul>
         </div>
+      </div>
       </div>
     </div>
   );

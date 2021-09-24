@@ -3,6 +3,10 @@
     margin-top: 20px;
     background-color: black;
     color: white;
+}
+.footer__container{
+    max-width: 1600px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -36,12 +40,17 @@
 } 
 
 @media only screen and (max-width: 650px) {
-    .footer{
+    .footer__container{
+        max-width: 1600px;
+        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-content: center;
+        align-items: center;
     }
     .footer__options{
+        width: 70%;
         display: flex;
         padding: 20px 0px;
     }
