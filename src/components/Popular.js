@@ -48,7 +48,7 @@ function Popular() {
           console.error("Error:", error);
         });
     })();
-  }, [coords]);
+  }, [coords,location]);
 
   console.log(coords)
   //HTML
