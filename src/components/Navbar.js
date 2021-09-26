@@ -15,11 +15,20 @@ function Navbar() {
         dispatch(modalState())
     }
 
+    const clickHandler = () => {
+        
+    }
+
     return (
         <div>
             <nav className="navbar">
                 <Link to='/'>
                     <img src="/assets/Foodlogo.png" alt="Logo" className="navbar__logo" /></Link>
+                    <a href="#" className="toggle-button" onClick={clickHandler}>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    </a>
                 <ul>
                     <li><Link to='/services'>SERVICES</Link></li>
                     <li><Link to='/contact'>CONTACT</Link></li>
