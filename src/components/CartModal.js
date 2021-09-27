@@ -18,7 +18,7 @@ function CartModal() {
     <div onClick={modalHandler} className="cartmodal__background"></div>
     <div className="cartmodal">
       <ul>
-        {cartItems.map((item) => (
+        { cartItems.length > 0 ? cartItems.map((item) => (
           <li className="cartmodal__item">
             <img src={item.photo} alt={item.dish}/>
             <p>{item.dish}</p>
@@ -29,7 +29,9 @@ function CartModal() {
             <button className="cartmodal__qty" onClick={() => { dispatch(addcart(item))}}>+</button>
             </div>
           </li>
-        ))}
+        )): <li className="cartmodal__item">
+        <p>Cart is empty</p>
+      </li> }
       </ul>
       { cartItems.length > 0 ? <Link to='/cart'><button onClick={modalHandler} className='cartmodal__button'>To Cart</button></Link> : ''} 
     </div>
