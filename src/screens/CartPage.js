@@ -17,9 +17,13 @@ function CartPage() {
 
   return (
     <>
+    <Navbar />
     <div className='cartpage'>
-      <Navbar />
       <h1>Cart</h1>
+      <div className="cartpage__left">
+
+      </div>
+      <div className="cartpage__right">
       <ul>
         {total.map((item) => (
           <li>
@@ -32,8 +36,8 @@ function CartPage() {
           </li>
         ))}
       </ul>
-      <div className='cartpage__checkout'> <button className='cartpage__orderbutton'>Order</button>
-        <h3>{totalAmount}€</h3>
+      <h3 className="cartpage__totalamount">{totalAmount}€</h3>
+      <button className='cartpage__orderbutton'>Order</button>
       </div>
     </div>
     </>
