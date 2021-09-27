@@ -69,7 +69,19 @@
 
 @media only screen and (max-width: 650px) {
     .toggle-button{
+        margin-top: 10px;
         display: flex;
+    }
+    .toggle-button.active > .bar1 {
+        transform: rotate(45deg);
+        margin-top: 10px;
+    }
+    .toggle-button.active > .bar2 {
+        display: none;
+    }
+    .toggle-button.active > .bar3 {
+        transform: rotate(-45deg);
+        margin-bottom: 10px;
     }
     .navbar {
         max-width: 1600px;
@@ -81,7 +93,7 @@
         justify-content: center;
     }
     .navbar > ul {
-        margin-top: -250px;
+        margin-top: -210px;
         display: flex;
         flex-direction: column;
         list-style: none;
@@ -104,5 +116,8 @@
     .navbar > ul > li {
         padding: 10px 0;
         margin: 0;
+    }
+    .navbar > ul > li > a:hover {
+        color: #F1B104;
     }
   }

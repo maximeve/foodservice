@@ -38,7 +38,7 @@ function Popular() {
   useEffect(() => {
     (async () => {
       await fetch(
-        `https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.latitude},${location.longitude}&radius=500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`
+        `https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.latitude},${location.longitude}&radius=3500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`
       )
         .then((response) => response.json())
         .then((data) => {

@@ -31,9 +31,9 @@ function Navbar() {
                 <Link to='/'>
                     <img src="/assets/Foodlogo.png" alt="Logo" className="navbar__logo" /></Link>
                     <span className={`toggle-button ${isActive}`} onClick={clickHandler}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
+                    <span className="bar bar1"></span>
+                    <span className="bar bar2"></span>
+                    <span className="bar bar3"></span>
                     </span>
                 <ul className={isActive}>
                     <li><Link to='/services'>SERVICES</Link></li>
