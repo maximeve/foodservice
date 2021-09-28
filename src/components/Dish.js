@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import './Dish.css'
 
 
-function Dish({desc,name,picture,price,restaurant}) {
+function Dish({desc,name,picture,price,restaurant,id}) {
   const dispatch = useDispatch();
   
   const dishName = useRef(null)
@@ -15,6 +15,7 @@ function Dish({desc,name,picture,price,restaurant}) {
   const addCartHandler = () => {
     let cartItem = {
       'restaurant': restaurant,
+      'id': id,
       'dish': dishName.current.innerHTML,
       'desc': dishDesc.current.innerHTML,
       'price': dishPrice.current.innerHTML,

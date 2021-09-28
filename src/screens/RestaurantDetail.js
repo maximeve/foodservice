@@ -12,7 +12,6 @@ function RestaurantDetail() {
   const cartItems = useSelector( state => state.menu.menu)
 
   const [randomCuisine,setRandomCuisine] = useState('')
-
   const [restaurant, setRestaurant] = useState("");
   const [hours, setHours] = useState([]);
   const [images, setImages] = useState([]);
@@ -147,7 +146,7 @@ function RestaurantDetail() {
       </div>
       <div className="restaurantdetails__dish">
       {/* FUNCTIE EN ID PASSEREN DIE ITEMS ADD AAN REDUX */}
-      {cartItems.italian.map(cartItem => <Dish desc={cartItem.description} name={cartItem.name} picture={cartItem.picture} price={cartItem.price} restaurant={restaurant.name}/>)}
+      {cartItems.italian.map(cartItem => <Dish desc={cartItem.description} name={cartItem.name} picture={cartItem.picture} price={cartItem.price} restaurant={restaurant.name} id={id}/>)}
       </div>
     </React.Fragment>
   );

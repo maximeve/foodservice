@@ -13,6 +13,7 @@ import CartPage from './screens/CartPage';
 import AccountPage from './screens/AccountPage';
 import ServicesPage from './screens/ServicesPage';
 import ContactPage from './screens/ContactPage';
+import OrderPage from './screens/OrderPage';
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path="/account" >
               <AccountPage />
+            </Route>
+            <Route path="/order" >
+              <OrderPage />
             </Route>
           </Switch>
       </Router>
