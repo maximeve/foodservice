@@ -26,7 +26,6 @@ function CartPage() {
       <div className="cartpage__container">
         <div className="cartpage__left">
           <h3>{cartItems.length > 0 ? cartItems[0].restaurant : 'Cart is empty'}</h3>
-          <p>{cartItems.length > 0 ? cartItems[0].id : 'Cart is empty'}</p>
         </div>
         <div className="cartpage__right">
           <ul>
