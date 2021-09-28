@@ -8,6 +8,8 @@ function CartPage() {
   const total = cartItems.map(item => ({ ...item, total: parseInt(item.price) * item.qty }))
   var [totalAmount, settotalAmount] = useState()
 
+  console.log(cartItems)
+
   useEffect(() => {
     let totalPrice = total.reduce(function (accumulator, item) {
       return accumulator + item.total;
@@ -20,6 +22,9 @@ function CartPage() {
     <div className='cartpage'>
       <Navbar />
       <h1>Cart</h1>
+      {cartItems.map((item) => (
+         <h2>{item.restaurant}</h2>
+        ))}
       <ul>
         {total.map((item) => (
           <li>

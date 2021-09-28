@@ -147,7 +147,7 @@ function RestaurantDetail() {
       </div>
       <div className="restaurantdetails__dish">
       {/* FUNCTIE EN ID PASSEREN DIE ITEMS ADD AAN REDUX */}
-      {cartItems.italian.map(cartItem => <Dish desc={cartItem.description} name={cartItem.name} picture={cartItem.picture} price={cartItem.price}/>)}
+      {cartItems.italian.map(cartItem => <Dish desc={cartItem.description} name={cartItem.name} picture={cartItem.picture} price={cartItem.price} restaurant={restaurant.name}/>)}
       </div>
     </React.Fragment>
   );
