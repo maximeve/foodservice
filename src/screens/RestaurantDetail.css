@@ -91,6 +91,15 @@
     align-items: center;
     justify-content: space-between;
   }
+  .restaurantdetail__info > h2{
+  padding: 0 10px;
+  }
+  .restaurantdetail__info__mobile{
+    padding: 0 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
   .restaurantdetail__hours{
     display: none;
   }

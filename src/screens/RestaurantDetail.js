@@ -65,6 +65,7 @@ function RestaurantDetail() {
       <div className="restaurantdetail">
         <div className="restaurantdetail__info">
           <h2>{restaurant.name}</h2>
+          <div className="restaurantdetail__info__mobile">
           <RatingView ratingValue={rating} />
           {hours.map((day) => (
             <p className="restaurantdetail__hours" key={day}>{day}</p>
@@ -74,6 +75,7 @@ function RestaurantDetail() {
               website
             </a>
           </p>
+          </div>
         </div>
         <div className="restaurantdetail__img">
           <Carousel>
