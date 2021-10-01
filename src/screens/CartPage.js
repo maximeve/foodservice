@@ -32,7 +32,10 @@ function CartPage() {
             {total.map((item) => (
               <li>
                 <div className='cartpage__item'>
-                  <img src={item.photo} alt={item.dish} /><h3>{item.dish}</h3>&nbsp;<p>x</p>&nbsp;<h4>{item.qty}</h4>
+                  <img src={item.photo} alt={item.dish} />
+                  <h3>{item.dish}&nbsp;</h3>
+                  <p>x&nbsp;</p>
+                  <h4>{item.qty}</h4>
                 </div>
                 <div className="cartpage__total">
                   <h4>{item.total}€</h4>
@@ -40,8 +43,10 @@ function CartPage() {
               </li>
             ))}
           </ul>
-          <h3 className="cartpage__totalamount">{totalAmount}€</h3>
-          <Link to='/order' className='cartpage__orderbutton'>Order</Link>
+          <div className="cartpage__order">
+            <h3 className="cartpage__totalamount">{totalAmount}€</h3>
+            <Link to='/' className='cartpage__orderbutton'>Order</Link>
+          </div>
         </div>
       </div>
     </div>

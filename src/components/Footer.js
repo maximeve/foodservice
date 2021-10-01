@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
     <div className='footer__container'>
       <div className="footer_logo">
         <img src="/assets/Foodlogo.png" id="footer__mainlogo"/>
@@ -30,7 +30,7 @@ function Footer() {
         </div>
       </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

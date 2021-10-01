@@ -15,8 +15,8 @@ function ServicesPage() {
           />
         </div>
         <div className="services__header__text">
-          <h1>How X works</h1>
-          <p>With X you have all your favorite dishes delivered to you door.</p>
+          <h1>How Foodservice works</h1>
+          <p>With Foodservice you have all your favorite dishes delivered to you door.</p>
         </div>
         <div className="services__steps">
           <div className="services__step">
