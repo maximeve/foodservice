@@ -36,6 +36,7 @@
 }
 
 .hero__input > button{
+    cursor: pointer;
     margin: 20px 0;
     font-weight: bold;
     color: white;
