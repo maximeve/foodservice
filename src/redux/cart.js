@@ -17,6 +17,9 @@ export const cartSlice = createSlice({
         state.items.push(action.payload)
       }
     },
+    clearcart: (state) => {
+      state.items = []
+    },
     removecart: (state, action) => {
       const itemIndex = state.items.findIndex((item) => item.dish === action.payload.dish)
       if (state.items[itemIndex].qty > 1){
@@ -34,6 +37,6 @@ export const cartSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addcart, removecart, modalState } = cartSlice.actions;
+export const { addcart, removecart, modalState, clearcart } = cartSlice.actions;
 
 export default cartSlice.reducer;

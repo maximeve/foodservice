@@ -61,13 +61,12 @@ function Popular() {
     for (var i = 0; i < restaurants.length; i++) {
       if (restaurants[i].name === search) {
         console.log('Search string IS IN array')
-        searched.push(restaurants[i])
+        setSearched([restaurants[i]])
       } else {
         console.log('Search string not in restaurants')
       }
     }
-    console.log(searched.length)
-    console.log(search)
+    console.log('set new search' + searched)
   }, [search]);
 
   const restaurantsmap = restaurants.map((resto) => (

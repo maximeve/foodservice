@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { clearcart } from '../redux/cart';
 import './CartPage.css'
 
 function CartPage() {
+  const dispatch = useDispatch()
   const cartItems = useSelector((state) => state.cart.items);
   const total = cartItems.map(item => ({ ...item, total: parseInt(item.price) * item.qty }))
   var [totalAmount, settotalAmount] = useState()
-
-  console.log(cartItems)
 
   useEffect(() => {
     let totalPrice = total.reduce(function (accumulator, item) {
@@ -45,7 +46,7 @@ function CartPage() {
           </ul>
           <div className="cartpage__order">
             <h3 className="cartpage__totalamount">{totalAmount}€</h3>
-            <Link to='/' className='cartpage__orderbutton'>Order</Link>
+            <Link to='/' className='cartpage__orderbutton' onClick={()=> dispatch(clearcart())} >Order</Link>
           </div>
         </div>
       </div>
