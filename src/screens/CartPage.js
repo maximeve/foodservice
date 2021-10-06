@@ -26,6 +26,7 @@ function CartPage() {
       <h1>Cart</h1>
       <div className="cartpage__container">
         <div className="cartpage__left">
+        <h1>You order from :</h1>
           <h3>{cartItems.length > 0 ? cartItems[0].restaurant : 'Cart is empty'}</h3>
         </div>
         <div className="cartpage__right">

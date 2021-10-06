@@ -47,6 +47,12 @@
     border: none;
 }
 
+.hero__input > button:active {
+    background-color: #d49d04;
+    box-shadow: 0 1px rgb(219, 219, 219);
+    transform: translateY(2px);
+  }
+
 @media only screen and (max-width: 650px) {
     .hero__image{
         margin-top: 40px;

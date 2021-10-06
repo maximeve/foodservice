@@ -77,6 +77,15 @@
   flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 1570px) {
+.restaurantdetails__dish{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+}
+
 @media only screen and (max-width: 650px) {
   .restaurantdetail {
     display: flex;
