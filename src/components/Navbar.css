@@ -101,6 +101,7 @@
         list-style: none;
         justify-content: center;
         padding-left: 0;
+        transition-duration: 0.3s;
     }
     .navbar > ul.active {
         margin-top: 0px;

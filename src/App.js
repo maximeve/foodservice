@@ -5,7 +5,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 import Home from './screens/Home';
 import RestaurantDetail from './screens/RestaurantDetail';
@@ -15,8 +14,6 @@ import ServicesPage from './screens/ServicesPage';
 import ContactPage from './screens/ContactPage';
 
 function App() {
-
-  const modalState = useSelector((state) => state.cart.modalIsOpen);
 
   return (
     <React.Fragment>

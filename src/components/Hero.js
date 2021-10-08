@@ -1,12 +1,11 @@
 import React,{ useRef } from 'react'
 import { setsearch } from '../redux/location'
-import { useSelector,useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import './Hero.css'
 
 function Hero() {
     const searchInput = useRef('');
     const dispatch = useDispatch();
-    const searchResult = useSelector((state) => state.location.search);
 
     const searchHandler = (e) =>{
         e.preventDefault()
@@ -20,7 +19,7 @@ function Hero() {
             </div>
             <div className="hero__input">
                 <h2>Hungry?<br />You are in the right place</h2>
-                <input type="text" ref={searchInput} />
+                <input type="text" placeholder="Search restaurants" ref={searchInput} />
                 <button onClick={searchHandler}>Find food</button>
             </div>
         </div>

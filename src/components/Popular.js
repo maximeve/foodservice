@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import restos from "../restaurants";
 import Card from "../components/Card";
-import { setlocation, setsearch } from '../redux/location';
+import { setlocation } from '../redux/location';
 import { useSelector, useDispatch } from "react-redux";
 
 import "./Popular.css";
@@ -11,7 +10,6 @@ function Popular() {
   const dispatch = useDispatch()
   const location = useSelector((state) => state.location.location);
   const search = useSelector((state) => state.location.search);
-  const [coords, setCoords] = useState({});
   const [restaurants, setRestaurants] = useState([]);
   const [searched, setSearched] = useState([]);
 
@@ -40,12 +38,11 @@ function Popular() {
     })();
   }, []);
 
+
   // GET RESTAURANTS FROM POSITION
   useEffect(() => {
     (async () => {
-      await fetch(
-        `https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.latitude},${location.longitude}&radius=3500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`
-      )
+      await fetch(`https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.latitude},${location.longitude}&radius=3500&type=meal_takeaway&key=${process.env.REACT_APP_GOOLE_MAPS}`)
         .then((response) => response.json())
         .then((data) => {
           setRestaurants(data.results);
@@ -54,12 +51,12 @@ function Popular() {
           console.error("Error:", error);
         });
     })();
-  }, [coords, location]);
+  }, [location]);
 
   useEffect(() => {
     setSearched([])
     for (var i = 0; i < restaurants.length; i++) {
-      if (restaurants[i].name === search) {
+      if (restaurants[i].name.toLowerCase() === search.toLowerCase()) {
         console.log('Search string IS IN array')
         setSearched([restaurants[i]])
       } else {

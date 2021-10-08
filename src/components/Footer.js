@@ -6,8 +6,8 @@ function Footer() {
     <footer className="footer">
     <div className='footer__container'>
       <div className="footer_logo">
-        <img src="/assets/Foodlogo.png" id="footer__mainlogo"/>
-        <img src="/assets/delivery.png" id="footer__deliverylogo"/>
+        <img src="/assets/Foodlogo.png" id="footer__mainlogo" alt="foodservice"/>
+        <img src="/assets/delivery.png" id="footer__deliverylogo" alt="delivery"/>
       </div>
       <div className="footer__options">
         <div>
